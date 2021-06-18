@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,28 +31,13 @@
             <th>Nome</th>
             <th>Espécie</th>
             <th>Setor</th>
+            <th>Editar</th>
+            <th>Deletar</th>
           </tr>
         </thead>
         
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>Cavaaloooo?</td>
-            <td>Equino</td>
-            <td>equino</td>
-          </tr>
-          <tr class="even">
-            <td>2</td>
-            <td>Baleia</td>
-            <td>Mamífero</td>
-            <td>aquatico</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Ganso</td>
-            <td>Ave</td>
-            <td>Gaiola</td>
-          </tr>
+      
         </tbody>
       </table>
     </div>

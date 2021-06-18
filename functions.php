@@ -5,9 +5,10 @@ class Functions {
 
   public $set_nome;
   public $set_id;
-
+  
   public $ani_nome;
   public $ani_especie;
+  public $setores;
 
   public function __construct() {
     $pdo = new PDO('mysql:host=localhost;dbname=zoo','root','');
@@ -29,10 +30,12 @@ class Functions {
   }
 
   public function getSetor() {
-    $setores = $this -> conn -> prepare("select * from setor order by name ASC");
-    $setores = $setores -> execute();
+    $this-> setores = $this -> conn -> prepare("select * from setor order by set_nome ASC");
+    $this-> setores -> execute();
+    $fetchSetores = $this -> setores ->fetchAll();
 
-    return $setores;
+
+    return $fetchSetores;
   }
 
   public function getAnimals() {
