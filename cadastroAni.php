@@ -1,3 +1,8 @@
+<?php
+
+    require_once("functions.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,17 +13,35 @@
 </head>
 <body>
     <form action="" method="post">
-        <label for="ani_nome">Nome do animal:</label>
-        <input type="text" name="ani_nome" id="ani_nome">
+        <label for="nome_animal">Nome do animal:</label>
+        <input type="text" name="ani_nome" id="nome_animal">
 
         <label for="ani_especie">Espécie do animal:</label>
-        <select name="select" name="ani_especie" id="ani_especie">
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-        </select>
+        <input type="text" name="ani_especie" id="ani_especie">
+        
 
+        <label for="select_setor" name="select_setor">Selecione a qual setor este animal pertence:</label>
+        <select name="select_setor"  id="select_setor">
+            <?php
+                $setores->execute();
+                var_dump($setores->execute());exit;
+                $fetchSetores = $setores->fetchAll();
+
+
+                foreach($fetchSetores as $key => $value){
+                    echo "<option value =''>1</option>";
+                }
+            ?>
+        </select>
         <input type="submit" value="Cadastrar">
+        <?php
+            if(isset($_POST['ani_nome'])){
+                $functioncontroller -> ani_nome = $_POST['ani_nome'];
+                $functioncontroller -> ani_nome();
+                echo 'cadastrado com sucesso';
+            }
+        ?>
+        
     </form>
 </body>
 </html>

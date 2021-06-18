@@ -29,14 +29,14 @@ class Functions {
   }
 
   public function getSetor() {
-    $setores = $this -> conn -> prepare("insert * setor");
+    $setores = $this -> conn -> prepare("select * from setor order by name ASC");
     $setores = $setores -> execute();
 
     return $setores;
   }
 
   public function getAnimals() {
-    $animais = $this -> conn -> prepare("insert * animal");
+    $animais = $this -> conn -> prepare("select * animal");
     $animais = $animais -> execute();
 
     return $animais;
