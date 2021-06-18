@@ -24,7 +24,7 @@
     <!-- Table with PDO -->
     <div>
       <table>
-        <thead>
+        <!-- <thead> -->
           <tr>
             <th>ID</th>
             <th>Nome</th>

@@ -27,15 +27,17 @@
   </header>
 
   <main>
-    <form action="" method="post">
-      <fieldset>
-        <h2>Cadastre um setor</h2>
+    <div>
+      <form action="" method="post">
+        <fieldset>
+          <h2 class="title">Cadastre um setor</h2>
 
-        <input type="text" name="set_nome" placeholder="Nome do Setor">
+          <input type="text" name="set_nome" placeholder="Nome do Setor">
 
-        <input type="submit" value="Cadastrar">
-      </fieldset>
-    </form>
+          <input type="submit" class="button" value="Cadastrar">
+        </fieldset>
+      </form>
+    </div>
   </main>
 
   <?php
