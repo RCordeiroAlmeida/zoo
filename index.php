@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zoo</title>
   <link rel="stylesheet" href="styles/header.css">
-  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="styles/table.css">
 </head>
 <body>
 
@@ -45,6 +45,12 @@
             <td>Baleia</td>
             <td>Mamífero</td>
             <td>aquatico</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Ganso</td>
+            <td>Ave</td>
+            <td>Gaiola</td>
           </tr>
         </tbody>
       </table>

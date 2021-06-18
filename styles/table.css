@@ -13,7 +13,7 @@ table {
 }
 
 table thead tr {
-  background-color: #009879;
+  background-color: #2B6147;
   color: #ffffff;
   text-align: left;
 }
@@ -29,11 +29,8 @@ table tbody tr {
 table tbody tr:nth-of-type(even) {
   background-color: #f3f3f3;
 }
-table tbody tr:last-of-type {
-  border-bottom: 2px solid #009879;
-}
 
 table tbody tr.even {
   font-weight: bold;
-  color: #009879;
+  color: #2B6147;
 }
