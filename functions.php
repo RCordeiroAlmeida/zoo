@@ -35,7 +35,12 @@ class Functions {
     return $setores;
   }
 
-  public function getAnimals()
+  public function getAnimals() {
+    $animais = $this -> conn -> prepare("insert * animal");
+    $animais = $animais -> execute();
+
+    return $animais;
+  }
   
 }
   
