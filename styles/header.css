@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Verdana, sans-serif;
+}
+
+/* Header */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #13463D;
+  height: 10vh;
+}
+
+.logo {
+  font-size: 24px;
+  letter-spacing: 4px;
+  color: #fff;
+}
+
+.link-list {
+  list-style: none;
+  display: flex;
+}
+.link-list li {
+  margin-left: 32px;
+}
+
+a {
+  text-decoration: none;
+  color: #88bb2a;
+  transition: 0.3s;
+}
+a:hover {
+  color: #8cd308;
+}
+
+
+/* Main */
+main {
+  background-image: url("../images/main.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 90vh;
+}
