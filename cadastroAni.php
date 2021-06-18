@@ -1,8 +1,3 @@
-<?php
-
-    require_once("functions.php");
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +7,11 @@
     <title>Cadastro de Animais</title>
 </head>
 <body>
+
+
+    <?php
+        require_once "functions.php";
+    ?>
     <form action="" method="post">
         <label for="nome_animal">Nome do animal:</label>
         <input type="text" name="ani_nome" id="nome_animal">
@@ -21,12 +21,11 @@
         
 
         <label for="select_setor" name="select_setor">Selecione a qual setor este animal pertence:</label>
+        
         <select name="select_setor"  id="select_setor">
             <?php
-                $setores->execute();
-                var_dump($setores->execute());exit;
-                $fetchSetores = $setores->fetchAll();
 
+      
 
                 foreach($fetchSetores as $key => $value){
                     echo "<option value =''>1</option>";
