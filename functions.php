@@ -5,7 +5,7 @@ class Functions {
 
   public $set_nome;
   public $set_id;
-  
+
   public $ani_nome;
   public $ani_especie;
   public $setores;
@@ -37,12 +37,22 @@ class Functions {
 
     return $fetchSetores;
   }
+  
+  public function getTableData(){
+    $tabela = $this -> conn -> prepare("
+      SELECT animal.ani_id, animal.ani_nome, animal.ani_especie, animal.ani_setor, setor.set_nome
+      FROM animal
+      INNER JOIN setor ON animal.ani_setor = setor.set_id
+    ");
+    $tabela -> execute();
+    $fetchAnimals = $tabela -> fetchAll();
 
-  public function getAnimals() {
-    $animais = $this -> conn -> prepare("select * animal");
-    $animais = $animais -> execute();
+    return $fetchAnimals;
+  }
 
-    return $animais;
+  public function delete($ani_id){
+    $del = $this -> conn -> prepare("
+      DELETE FROM animal WHERE ani_id = $ani_id");
   }
   
 }

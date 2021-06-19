@@ -1,4 +1,8 @@
+<?php
+    require_once "functions.php";
 
+    $functionController = new Functions;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,9 +39,23 @@
             <th>Deletar</th>
           </tr>
         </thead>
-        
         <tbody>
-      
+            <?php
+               $data = $functionController -> getTableData();
+
+               foreach($data as $animal){
+                echo "
+                    <tr>
+                        <td>$animal[ani_id]</td>
+                        <td>$animal[ani_nome]</td>
+                        <td>$animal[ani_especie]</td>
+                        <td>$animal[set_nome]</td>
+                        <td></td>
+                        <td><a href ='delete.php?id=$animal[ani_id]'>&times;</a></td>
+                    </tr>
+                ";
+               }
+            ?>
         </tbody>
       </table>
     </div>
