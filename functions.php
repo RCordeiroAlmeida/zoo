@@ -50,10 +50,13 @@ class Functions {
     return $fetchAnimals;
   }
 
-  public function delete($ani_id){
-    $del = $this -> conn -> prepare("
-      DELETE FROM animal WHERE ani_id = $ani_id");
+  public function deleteAnimals($ani_id){
+    $del = $this -> conn -> prepare("DELETE FROM animal WHERE ani_id = $ani_id");
+    $del -> execute();
   }
   
+  public function editAnimals($ani_id, $ani_nome, $ani_especie){
+    $edit = $this -> conn -> prepare("UPDATE animal SET ani_nome='$ani_nome',ani_especie='$ani_especie'");
+    $edit -> execute();
+  }
 }
-  

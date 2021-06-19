@@ -1,6 +1,5 @@
 <?php
     require_once "functions.php";
-
     $functionController = new Functions;
 ?>
 <!DOCTYPE html>
@@ -51,8 +50,8 @@
                         <td>$animal[ani_nome]</td>
                         <td>$animal[ani_especie]</td>
                         <td>$animal[set_nome]</td>
-                        <td></td>
-                        <td><a href ='delete.php?id=$animal[ani_id]'>&times;</a></td>
+                        <td><a href = 'editAnimal.php?ani_id=$animal[ani_id]&ani_nome=$animal[ani_nome]&ani_especie=$animal[ani_especie]'><img src='images/edit_black_24dp.svg'></td>
+                        <td><a href ='delete.php?id=$animal[ani_id]'><img src='images/delete_black_24dp.svg'></a></td>
                     </tr>
                 ";
                }

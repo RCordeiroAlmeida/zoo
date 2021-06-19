@@ -60,6 +60,7 @@
       $functioncontroller -> set_id = $_POST['select_setor'];
 
       $functioncontroller -> setAnimal();
+      header("Location: index.php");
     }
   ?>
 

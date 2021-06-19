@@ -1,6 +1,5 @@
 <?php
   require_once  "functions.php";
-
   $functioncontroller = new Functions;
 ?>
 
@@ -33,7 +32,7 @@
         <fieldset>
           <h2 class="title">Cadastre um setor</h2>
 
-          <input type="text" name="set_nome" placeholder="Nome do Setor">
+          <input type="text" name="set_nome" placeholder="Nome do Setor" required>
 
           <input type="submit" class="button" value="Cadastrar">
         </fieldset>
@@ -45,6 +44,7 @@
     if(isset($_POST['set_nome'])) {
       $functioncontroller -> set_nome = $_POST['set_nome'];
       $functioncontroller -> setSetor();
+      header("Location: cadastroAni.php");
     }
   ?>
 </body>
