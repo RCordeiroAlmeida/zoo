@@ -26,7 +26,7 @@ form fieldset {
   margin-bottom: 30px;
 }
 
-form input{
+form input, select{
   padding: 15px;
   border: 1px solid #ccc;
   border-radius: 3px;
@@ -35,6 +35,19 @@ form input{
   box-sizing: border-box;
   color: #13453D;
   font-size: 13px;
+  outline: none;
+}
+form select {
+  padding: 15px 11px 15px;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #13453D;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #13453D;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #13453D;
 }
 
 form .button {

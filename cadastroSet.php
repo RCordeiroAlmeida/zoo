@@ -21,6 +21,7 @@
       <h1 class="logo">Zoo</h1>
       <ul class="link-list">
         <li><a href="index.php">Página Principal</a></li>
+        <li><a href="cadastroSet.php">Cadastrar Setor</a></li>
         <li><a href="cadastroAni.php">Cadastrar Animal</a></li>
       </ul>
     </nav>
